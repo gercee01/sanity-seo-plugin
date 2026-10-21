@@ -1,0 +1,83 @@
+{
+  "name": "@gerald/seo",
+  "version": "0.2.0-rc.3",
+  "description": "Shared SEO fields, previews and technical SEO for Sanity Studio and Next.js",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": {
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js"
+    },
+    "./sanity": {
+      "types": "./dist/sanity/index.d.ts",
+      "import": "./dist/sanity/index.js"
+    },
+    "./next": {
+      "types": "./dist/next/index.d.ts",
+      "import": "./dist/next/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --experimental-test-module-mocks --test tests/*.test.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:package": "node scripts/verify-package.mjs",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "@sanity/ui": ">=4.4.9 <5",
+    "next": ">=16.4.2 <17",
+    "react": ">=19.2.4 <20",
+    "sanity": ">=6.19.0 <7",
+    "styled-components": ">=6.1.18 <7"
+  },
+  "peerDependenciesMeta": {
+    "@sanity/ui": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "sanity": {
+      "optional": true
+    },
+    "styled-components": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@sanity/ui": "4.4.9",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "jsdom": "29.1.1",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sanity": "6.19.0",
+    "styled-components": "^6.1.18",
+    "typescript": "~6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gercee01/sanity-seo-plugin.git"
+  },
+  "homepage": "https://github.com/gercee01/sanity-seo-plugin#readme",
+  "bugs": {
+    "url": "https://github.com/gercee01/sanity-seo-plugin/issues"
+  }
+}

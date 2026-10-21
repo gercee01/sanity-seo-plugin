@@ -1,0 +1,789 @@
+{
+  "audit_date": "2026-10-20",
+  "generated_at_utc": "2026-10-20T14:38:33.192231+00:00",
+  "reference": {
+    "path": "plugins/",
+    "version": "28.7",
+    "entry_sha256": "abf3c51882ab0ac122e9ec36d7182232ca5727364a6f3d9e98fc5795e6e4ca29",
+    "method": "Static supplied artifact analysis; no WordPress runtime or paid-service execution"
+  },
+  "ours": {
+    "version": "0.2.0-rc.1",
+    "archive_sha512": "a8e93c48c3158317bb40ffa4788b76d9ee98cbc55557930aecc9cb97064569d11c2008931d11efe653e5a6087f0bf8199b5dc677d6abbced0cb82bd32d897555"
+  },
+  "scope": "Comprehensive named feature-family inventory; conditional targets are not proof of unlocked Free features; counts are not parity percentages",
+  "summary": {
+    "entries": 84,
+    "status_counts": {
+      "Partial": 29,
+      "Missing": 41,
+      "Conditional target": 14
+    },
+    "priority_counts": {
+      "P1": 35,
+      "P2": 31,
+      "P0": 1,
+      "P3": 17
+    }
+  },
+  "features": [
+    {
+      "id": "A01",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Search snippet editor and device previews",
+      "gap": "Current preview changes card width; missing closer snippet layout/truncation and integrated snippet editing.",
+      "evidence": "Y01, Y02; O02",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A02",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Measured SEO title-width guidance",
+      "gap": "We use character counts; no browser measurement, width meter, or calibrated result-width feedback.",
+      "evidence": "Y02 titleWidth; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A03",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Editor template-variable picker",
+      "gap": "No variable insertion/available-token guidance in document search fields; document title overrides remain literal.",
+      "evidence": "Y01, Y07; O02, O04",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A04",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Distinct Problems / Improvements / Good results",
+      "gap": "Our UI combines problems and improvements despite calculating different priorities.",
+      "evidence": "Y02; O01, O02",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A05",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Separate calibrated SEO/readability assessment aggregation",
+      "gap": "We have separate lights, but aggregate warnings with simple rules rather than calibrated assessment applicability/weights. Do not copy an unverified numeric score.",
+      "evidence": "Y02; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A06",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Keyphrase-analysis readiness",
+      "gap": "Missing keyphrase is informational, so green may mean keyphrase analysis was never performed. Show not-started/not-applicable distinctly; do not require a focus phrase for every page purpose.",
+      "evidence": "Y02, Y05; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A07",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Keyphrase length and function-word checks",
+      "gap": "No length/meaningful-word assessment.",
+      "evidence": "Y02 keyphraseLength/functionWordsInKeyphrase; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A08",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Keyphrase density",
+      "gap": "No frequency/overuse assessment.",
+      "evidence": "Y02 keyphraseDensity; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A09",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Keyphrase in subheadings",
+      "gap": "Heading-order checks exist; phrase use in subheads is not evaluated.",
+      "evidence": "Y02 subheadingsKeyword; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A10",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Keyphrase in image alt text",
+      "gap": "Alt presence exists; topical phrase/image relationship is not assessed.",
+      "evidence": "Y02 imageKeyphrase; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A11",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Content image presence/count guidance",
+      "gap": "No document-purpose-aware image coverage assessment.",
+      "evidence": "Y02 images; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A12",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Internal-link presence",
+      "gap": "We validate supplied links but do not assess whether internal links are present.",
+      "evidence": "Y02 internalLinks; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A13",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Outbound/followed-link assessment",
+      "gap": "No internal/external/followed distinction or absence assessment.",
+      "evidence": "Y02 externalLinks; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A14",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Competing keyphrase anchors",
+      "gap": "No warning about links using the target phrase as a competing anchor.",
+      "evidence": "Y02 textCompetingLinks; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A15",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Previously used focus keyphrases",
+      "gap": "No cross-document phrase reuse/conflict query or filter.",
+      "evidence": "Y02, Y05; O01, O03",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A16",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Title/description/intro/slug keyphrase rules",
+      "gap": "Present as exact normalized contiguous matching; missing richer matching, function-word handling, and graded feedback.",
+      "evidence": "Y02, Y03; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A17",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Text length by content purpose",
+      "gap": "One advisory 300-word reference; no normal/taxonomy/cornerstone profiles or purpose-specific applicability.",
+      "evidence": "Y02; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A18",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Passive-voice analysis",
+      "gap": "No passive-voice rule or supported-language calibration.",
+      "evidence": "Y02 passiveVoice; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A19",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Transition-word analysis",
+      "gap": "No transition-word rule or supported-language calibration.",
+      "evidence": "Y02 textTransitionWords; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A20",
+      "priority": "P0",
+      "status": "Partial",
+      "feature": "Readability/text eligibility",
+      "gap": "Heading-only content can pass prose checks; see R01.",
+      "evidence": "Y02 textPresence; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A21",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Existing readability rules",
+      "gap": "Sentence/paragraph length, long sections, repeated beginnings exist; thresholds, score bands, and applicability remain simplified.",
+      "evidence": "Y02; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A22",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Exact text highlighting",
+      "gap": "Field links exist; no marking of affected words/sentences in Portable Text/custom blocks.",
+      "evidence": "Y02 markAssessment; O02",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A23",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Content Insights",
+      "gap": "Word count exists; no reading time, Flesch Reading Ease display, or relevant term insights with explicit applicability.",
+      "evidence": "Y02 Insights paths; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A24",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Inclusive-language analysis/preferences",
+      "gap": "No matching rule family or global/user enablement. Supplied implementation has language/version gates.",
+      "evidence": "Y03; O01, O04",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A25",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Language-specific research",
+      "gap": "Tokenization accepts language tags, but readability is English-only and we do not implement Yoast's language researchers/word-form coverage.",
+      "evidence": "Y03; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A26",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "Multiple/related keyphrases",
+      "gap": "One focus phrase only. Advanced related-keyphrase paths are bundled; Premium product support requires entitlement distinction.",
+      "evidence": "Y02, Y17; O05",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A27",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "Synonyms and word forms",
+      "gap": "No synonym/form matching model. Bundled language helpers are not evidence every advanced mode is Free-enabled.",
+      "evidence": "Y02, Y03, Y17; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A28",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "Keyphrase distribution",
+      "gap": "No distribution-across-text assessment. Export exists outside the default assessor list.",
+      "evidence": "Y02, Y17; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "A29",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "Word complexity",
+      "gap": "No complexity assessment. Bundled advanced exports do not prove default activation.",
+      "evidence": "Y02; O01",
+      "category": "A. Search editing, SEO analysis, and readability"
+    },
+    {
+      "id": "B01",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Independent Open Graph and X overrides",
+      "gap": "Our shared social object drives both. Missing per-network title/description/image overrides and fallback provenance.",
+      "evidence": "Y01; O02, O05, O06",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B02",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Platform-specific social previews",
+      "gap": "Cards are largely identical; missing platform-appropriate layouts/truncation. Supplied fields do not establish paid preview entitlement.",
+      "evidence": "Y01; O02",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B03",
+      "priority": "P2",
+      "status": "Conditional target",
+      "feature": "Per-type social appearance templates",
+      "gap": "No social title/description/image template per content type. Public documentation identifies paid template functionality.",
+      "evidence": "Y07, Y17; O04",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B04",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Cornerstone switch and filters",
+      "gap": "No authored cornerstone flag or corresponding lists.",
+      "evidence": "Y01, Y04; O02, O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B05",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Cornerstone analysis profile",
+      "gap": "No stricter cornerstone SEO/readability profile, independent of the switch.",
+      "evidence": "Y02, Y04; O01",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B06",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Incoming/outgoing internal-link counts",
+      "gap": "No cross-document graph or native list counts. Per-link validation is not a link counter.",
+      "evidence": "Y05; O01, O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B07",
+      "priority": "P2",
+      "status": "Conditional target",
+      "feature": "Internal-link suggestions",
+      "gap": "No suggested target/content relationships. Requires a complete shared graph and content coverage first.",
+      "evidence": "Y02, Y17; O03, O05",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B08",
+      "priority": "P2",
+      "status": "Conditional target",
+      "feature": "Cornerstone/orphan-content workouts",
+      "gap": "No guided choose/check/update/add-links sequence. Workouts in the supplied copy have Premium gates.",
+      "evidence": "Y04, Y17; O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B09",
+      "priority": "P2",
+      "status": "Conditional target",
+      "feature": "Orphan/stale-content review",
+      "gap": "No editorial orphan/stale-cornerstone filters. Exact paid stale-content behavior is not established by a cleanup routine's name.",
+      "evidence": "Y04, Y17; O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B10",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Indicators in native content lists",
+      "gap": "SEO/readability/keyphrase metadata is visible only in our editor/tool, not native Page/Post lists.",
+      "evidence": "Y05; O02, O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B11",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Direct score/keyphrase sorting/filtering",
+      "gap": "Tool filters type/review-state/category; missing separate SEO/readability state filters, phrase filters, and corresponding native-list navigation.",
+      "evidence": "Y05; O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B12",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Shared dashboard state",
+      "gap": "Each screen has its own scan state; no common result set or preserved navigation context.",
+      "evidence": "Y06; O03; R05",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B13",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Actionable persistent tasks",
+      "gap": "Missing setup/template/recent-content task queues, completion, priority, and relevant next action.",
+      "evidence": "Y06; O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B14",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Alert center with dismissal/restoration",
+      "gap": "Only transient errors exist; no persistent issues/alerts with user resolution.",
+      "evidence": "Y06; O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B15",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Widespread default-data alerts",
+      "gap": "No site-level pattern/default-use counts or configurable assessment of whether that is intentional.",
+      "evidence": "Y06; O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B16",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Resumable reanalysis and freshness",
+      "gap": "Explicit 25-document pages exist; missing shared/resumable progress and content/settings/adapter/analyzer revision tracking. Yoast indexable rebuild is not content rewriting.",
+      "evidence": "Y06; O03; R06",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "B17",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Safe bulk title/description editing",
+      "gap": "No select/edit/review/save workflow for multiple documents. Use native permissions, revision conflict checks and explicit application; never silently publish.",
+      "evidence": "Y12; O03",
+      "category": "B. Social editing, site structure, dashboards, and workflow"
+    },
+    {
+      "id": "C01",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Guided first-run configuration",
+      "gap": "Text checklist exists; no saved steps, completion state, or integrated verification of frontend/settings publication.",
+      "evidence": "Y06, Y07; O03",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C02",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Site-wide feature preferences",
+      "gap": "No explicit enable/disable preferences for SEO/readability/Insights/cornerstone/schema/social/sitemap modules, with coherent output behavior.",
+      "evidence": "Y07; O04",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C03",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Type-specific descriptions",
+      "gap": "Only type title/indexing settings; no type description defaults/templates.",
+      "evidence": "Y07; O04, O05",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C04",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Rich safe replacement variables",
+      "gap": "Only title/siteName/separator; no adapter-backed excerpt/page/author/date/type terms or visible unsupported-token guidance.",
+      "evidence": "Y07; O04, O05",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C05",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Homepage-specific defaults",
+      "gap": "A homepage document can have overrides; no distinct global homepage search/social appearance configuration.",
+      "evidence": "Y07; O04",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C06",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Taxonomy/category/tag appearance",
+      "gap": "Generic adapters can represent these documents, but there are no presets/settings for their archives and defaults.",
+      "evidence": "Y07, Y08; O04, O05",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C07",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Author/date/archive contexts",
+      "gap": "No packaged route context/defaults/enablement for real archive routes. Do not create unused archives merely to reproduce a menu.",
+      "evidence": "Y07, Y08; O05",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C08",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Search/404 context policy",
+      "gap": "No explicit context model with search/404 templates and safe default indexing rules; host can only construct manual synthetic adapters.",
+      "evidence": "Y08; O05, O06",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C09",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Pagination-aware SEO",
+      "gap": "No page/total context, page token, or canonical policy for path/query pagination; production path helper currently rejects query routes.",
+      "evidence": "Y07, Y08; O05",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C10",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Site and publisher identity",
+      "gap": "Missing alternate site/publisher names, public publisher URL, sameAs profiles, and fuller factual author identity. Basic name/type/logo exists.",
+      "evidence": "Y09; O04, O05, O06",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C11",
+      "priority": "P1",
+      "status": "Missing",
+      "feature": "Site-verification settings/output",
+      "gap": "No package contract for Google/Bing/Yandex/Baidu/Ahrefs/Pinterest verification codes. Next can support host-written tags, but that is not our settings feature.",
+      "evidence": "Y18; O04, O06",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C12",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Advanced-setting permissions",
+      "gap": "Native Sanity permissions apply, but no effective-permission setup/diagnostics for global settings versus document SEO. UI hiding is not server authorization.",
+      "evidence": "Y07; O02, O04",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C13",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Portable settings export/import",
+      "gap": "No SEO-only versioned settings envelope, review/diff, or cross-project asset mapping. Generic dataset export is a different workflow.",
+      "evidence": "Y12; O04",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C14",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Yoast content migration mapping",
+      "gap": "No importer for Yoast metadata, cornerstone flags, hierarchy, canonical/indexing policies, or redirect history. Start with Yoast-to-Sanity, not every WP-to-WP importer.",
+      "evidence": "Y01, Y12; O05",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "C15",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Feed attribution/settings",
+      "gap": "No RSS integration or before/after attribution. Add only for consumers that actually provide feeds.",
+      "evidence": "Y08; O06",
+      "category": "C. Global settings and route-context coverage"
+    },
+    {
+      "id": "D01",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Advanced page robots directives",
+      "gap": "index/noindex exists; follow is fixed true and max-preview values are fixed. Missing nofollow, nosnippet, noimageindex and configurable supported preview limits.",
+      "evidence": "Y08; O05, O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D02",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Structured robots user-agent rules",
+      "gap": "Wildcard allow/disallow and preview protection exist; no per-agent rules or multiple sitemap sources.",
+      "evidence": "Y08; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D03",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Explicit public-content eligibility",
+      "gap": "We exclude draft/release IDs, not arbitrary private/gated content. Host query/adapter must own and prove publication eligibility. Noindex does not secure private data.",
+      "evidence": "Y11; O05, O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D04",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Schema choices by type/document",
+      "gap": "Only page/article adapter kinds. Missing content-appropriate page/article subtype choices and a Studio Schema section/defaults.",
+      "evidence": "Y01, Y09; O02, O04, O05, O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D05",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Rich connected schema graph",
+      "gap": "Missing shared primary ImageObject/author IDs and several factual date/author/word-count relationships. Basic graph is already present.",
+      "evidence": "Y09; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D06",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "Typed graph extension contract",
+      "gap": "Host can post-process JSON-LD manually, but no documented extension/validation/deduplication contract.",
+      "evidence": "Y09; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D07",
+      "priority": "P1",
+      "status": "Partial",
+      "feature": "Breadcrumb authoring and visible renderer",
+      "gap": "JSON-LD accepts adapter trails; missing title overrides, primary hierarchy/category/parent choices, display settings, and accessible visible Next breadcrumbs from the same trail.",
+      "evidence": "Y01, Y10; O05, O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D08",
+      "priority": "P2",
+      "status": "Missing",
+      "feature": "FAQ/HowTo content-to-schema adapters",
+      "gap": "No matching structured sections/steps/questions integration. Require real visible content, not raw schema-only decoration.",
+      "evidence": "Y09; O05, O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D09",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Sitemap index and batched providers",
+      "gap": "Flat sitemap helper exists; no index/large-site batching/type/archive provider contract. Keep small-site path simple.",
+      "evidence": "Y11; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D10",
+      "priority": "P2",
+      "status": "Partial",
+      "feature": "Meaningful content images in sitemap",
+      "gap": "Only one resolved SEO image is emitted; content image nodes do not carry URLs for a complete eligible-image list.",
+      "evidence": "Y11; O05, O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D11",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Optional llms.txt",
+      "gap": "No deterministic export, manual/automatic selection, or freshness integration. Not evidence of AI visibility/ranking.",
+      "evidence": "Y15; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D12",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Schema aggregation/schemamap endpoints",
+      "gap": "No site-wide JSON/XML graph discovery endpoint. Supplied feature is conditional/default-disabled, so not a core-release blocker.",
+      "evidence": "Y15; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D13",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Public head/metadata API",
+      "gap": "No Yoast-style get-head-for-URL or REST metadata representation. Existing pure core/Next helpers cover our current frontend use case.",
+      "evidence": "Y16; O05, O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D14",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Enhanced Slack sharing data",
+      "gap": "No author/reading-time label tags. OG/X basics already exist.",
+      "evidence": "Y16; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D15",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "IndexNow submission",
+      "gap": "Flag exists in supplied copy and public docs identify paid functionality; working delivery was not established in the inspected base tree. Our publication pipeline has no submission client.",
+      "evidence": "Y07, Y17; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "D16",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "Dedicated AI-crawler controls",
+      "gap": "Base options name CCBot/Google-Extended/GPTBot; enforcement in the supplied base copy is not proven. Our robots helper has no explicit feature for these policies.",
+      "evidence": "Y08; O06",
+      "category": "D. Public output, structured data, discovery, and crawler controls"
+    },
+    {
+      "id": "E01",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "AI title/description/social suggestions",
+      "gap": "No authenticated generation service, consent/usage handling, or apply/revert workflow. Local source contains request/entitlement/UI paths, not a verified model service.",
+      "evidence": "Y13; O02",
+      "category": "E. Paid and externally connected product targets"
+    },
+    {
+      "id": "E02",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "AI assessment fixes",
+      "gap": "No suggestion/apply flow. Bundled upsell/apply paths do not prove working paid service access.",
+      "evidence": "Y13; O02",
+      "category": "E. Paid and externally connected product targets"
+    },
+    {
+      "id": "E03",
+      "priority": "P3",
+      "status": "Conditional target",
+      "feature": "AI content planning/outlines",
+      "gap": "No topic/intent/outline pipeline. Requires independent server-side integration and explicit editor application.",
+      "evidence": "Y13; O03",
+      "category": "E. Paid and externally connected product targets"
+    },
+    {
+      "id": "E04",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Semrush keyphrase research",
+      "gap": "No authorized account/API integration; independent of local keyword checks.",
+      "evidence": "Y14; O02",
+      "category": "E. Paid and externally connected product targets"
+    },
+    {
+      "id": "E05",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Wincher rank tracking",
+      "gap": "No authorized tracking connection, account state, or metrics.",
+      "evidence": "Y14; O03",
+      "category": "E. Paid and externally connected product targets"
+    },
+    {
+      "id": "E06",
+      "priority": "P3",
+      "status": "Missing",
+      "feature": "Search Console/GA4 metrics",
+      "gap": "No connected top queries/pages or organic sessions. In Yoast these depend on onboarded/connected Site Kit/Google data.",
+      "evidence": "Y14; O03",
+      "category": "E. Paid and externally connected product targets"
+    },
+    {
+      "id": "E07",
+      "priority": "P2",
+      "status": "Conditional target",
+      "feature": "Redirect manager and slug-change prompts",
+      "gap": "No maintained redirect records, change prompts, status selection, loop/duplicate validation, or activated Next/runtime redirects. Premium docs establish the target; a Free upsell page does not establish the paid engine in this copy.",
+      "evidence": "Y17, Y08; O05, O06",
+      "category": "E. Paid and externally connected product targets"
+    }
+  ],
+  "report": "docs/yoast-gap-audit-2026-10-20.md",
+  "implementation_changed": false
+}

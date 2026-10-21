@@ -1,0 +1,24 @@
+{
+  "name": "seo-example-portable-text",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build --webpack",
+    "build:studio": "sanity build studio-dist --yes",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@gerald/seo": "file:../../.artifacts/gerald-seo-0.2.0-rc.3.tgz",
+    "@sanity/ui": "4.4.9",
+    "next": "16.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "sanity": "6.19.0",
+    "styled-components": "^6.1.18"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "typescript": "~6.0.0"
+  }
+}

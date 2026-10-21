@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {SEO_PACKAGE_VERSION} from '../dist/core/index.js';
+import {validateVerification} from './verification.mjs';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const manifest = JSON.parse(readFileSync(path.join(root, 'package.json'), 'utf8'));
+const lock = JSON.parse(readFileSync(path.join(root, 'package-lock.json'), 'utf8'));
+const report = JSON.parse(readFileSync(path.join(root, '.artifacts/verification.json'), 'utf8'));
+validateVerification(root, report);
+assert.equal(manifest.version, SEO_PACKAGE_VERSION, 'UI and package versions must agree.');
+assert.equal(lock.version, manifest.version);
+assert.equal(lock.packages[''].version, manifest.version);
+assert.equal(report.version, manifest.version, 'Verification must cover this version.');
+assert.equal(report.tarball, `gerald-seo-${manifest.version}.tgz`);
+const tarball = path.join(root, '.artifacts', report.tarball);
+assert.ok(readFileSync(path.join(root, 'CHANGELOG.md'), 'utf8').includes(`## ${manifest.version}`), 'Add release notes.');
+if (process.env.GITHUB_REF?.startsWith('refs/tags/')) assert.equal(process.env.GITHUB_REF, `refs/tags/v${manifest.version}`, 'Release tag must match the package version.');
+console.log(`Verified release artifact: ${path.relative(root, tarball)}\nSHA-512: ${report.sha512}`);

@@ -1,0 +1,47 @@
+name: Prepare or publish SEO release
+on:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish after registry ownership and trusted publishing have been configured
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: npm-release
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.19.0
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - run: npm ci
+      - run: npm run test:package
+      - run: node scripts/check-release.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verified-seo-release
+          path: |
+            .artifacts/gerald-seo-0.*.tgz
+            .artifacts/verification.json
+          include-hidden-files: true
+          if-no-files-found: error
+      - name: Publish the verified tarball
+        if: inputs.publish
+        env:
+          NPM_PUBLISH_ENABLED: ${{ vars.NPM_PUBLISH_ENABLED }}
+        run: |
+          test "$NPM_PUBLISH_ENABLED" = "true" || { echo 'Registry setup has not been enabled.'; exit 1; }
+          VERSION=$(node -p 'JSON.parse(require("fs").readFileSync("package.json")).version')
+          test "$GITHUB_REF" = "refs/tags/v$VERSION" || { echo 'Run publishing from the matching version tag.'; exit 1; }
+          CHANNEL=latest
+          case "$VERSION" in *-*) CHANNEL=next ;; esac
+          npm publish ".artifacts/gerald-seo-$VERSION.tgz" --ignore-scripts --access public --tag "$CHANNEL"

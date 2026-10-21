@@ -2,7 +2,7 @@
 
 Follow the [execution checklist](EXECUTION-PLAN.md) for the implementation and verification order. Phase 1 correctness/evidence fixes and Phase 2 editor-loop fixes are incorporated in the rc.2 source; see the [audit](yoast-gap-audit-2026-10-20.md) for the original findings.
 
-The source targets `0.2.0-rc.3`, using local tarball distribution. The standalone repository is https://github.com/gercee01/sanity-seo-plugin, with `main` as the initial branch and Windows/Linux CI configured. Repository connection does not imply a successful workflow run; inspect Actions and the recorded commit/run evidence. npm authentication/ownership/trusted publishing remain unproven. The earlier unauthenticated public registry lookup returned 404; that does not establish scope ownership or private visibility. No registry publication or consumer deployment is implied.
+The source targets `0.2.0-rc.3`, using local tarball distribution. The standalone repository is https://github.com/gercee01/sanity-seo-plugin, with `main` as the initial branch. [Windows/Linux CI run 39573895942](https://github.com/gercee01/sanity-seo-plugin/actions/runs/39573895942) passed for candidate commit `67738e2`; [repository/CI evidence](../reports/github-setup-and-ci.md) records the local verification and artifact links. npm authentication/ownership/trusted publishing remain unproven. The earlier unauthenticated public registry lookup returned 404; that does not establish scope ownership or private visibility. No registry publication or consumer deployment is implied.
 
 ## Local verification and artifacts
 
@@ -45,7 +45,7 @@ The candidate is verified only to the extent recorded by its successful bound re
 | Next.js | 16.4.2 |
 | styled-components / TypeScript | 6.6.0 / 6.0.3 |
 
-Peer/engine ranges are installation constraints, not evidence that all accepted versions work. No verified Node 22, React 19.2, styled-components 6.1 or Linux support is claimed for this local candidate. Hosted Windows/Linux checks and any expanded compatibility matrix remain Step 11 work; do not infer them from prepared YAML files.
+Peer/engine ranges are installation constraints, not evidence that all accepted versions work. Node 22, React 19.2, styled-components 6.1 and other untested combinations remain unverified. The hosted Windows/Linux matrix for the candidate commit has passed; use its bound reports for actual runner/toolchain details. Expanded version coverage requires new checks.
 
 ## CI and registry setup
 

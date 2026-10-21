@@ -1,5 +1,7 @@
 # Phase 3 execution record
 
+Follow-up: repository setup and Step 11 are now complete for rc.3, with successful Windows/Linux CI. See [repository/CI evidence](github-setup-and-ci.md) and the current [execution checklist](../docs/EXECUTION-PLAN.md). The rc.2 verification record below remains historical evidence for its unchanged archive.
+
 Date: 2026-10-21. Candidate: `@gerald/seo@0.2.0-rc.2`. **Local candidate verified; hosted Step 11 remains pending.** This workspace record supplements the frozen, pre-verification [execution checklist](../docs/EXECUTION-PLAN.md) without changing packaged bytes.
 
 - [x] **9. Finalize source/docs.** Root manifest/lock, public version constant, both example manifests/lock entries, changelog, README, API/upgrade/release guidance and CI commands agree. Version/lock/workflow/link checks passed. Other fixture dependency resolutions are unchanged. Existing rc.1 is preserved. The local archive inventory contains one rc.2 file: the candidate produced by this run. Public unauthenticated npm lookup returned 404; this does not establish scope ownership or private visibility.
